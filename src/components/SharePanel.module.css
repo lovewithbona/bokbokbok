@@ -1,0 +1,138 @@
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 24px 48px;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.resultLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.sparkle {
+  font-size: 22px;
+  animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0%, 100% { transform: rotate(-10deg) scale(1); }
+  50% { transform: rotate(10deg) scale(1.1); }
+}
+
+.resultLabel p {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.5px;
+}
+
+.mainAction {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.saveBtn {
+  width: 100%;
+  position: relative;
+}
+
+.recordDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  animation: blink 0.8s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.progressBar {
+  width: 100%;
+  height: 4px;
+  background: var(--line);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--point);
+  border-radius: var(--radius-full);
+  transition: width 0.1s linear;
+}
+
+/* Share grid */
+.shareGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.shareItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 14px 8px;
+  background: var(--surface);
+  border-radius: var(--radius-md);
+  border: 1.5px solid var(--line);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: -0.2px;
+  transition: transform 0.15s var(--ease-spring), background 0.15s;
+  cursor: pointer;
+  font-family: var(--font);
+}
+
+.shareItem:active {
+  transform: scale(0.94);
+  background: var(--soft-point);
+  border-color: var(--point);
+}
+
+.shareIcon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.kakao {
+  background: #FEE500;
+  border-color: #FEE500;
+  color: #3A1D1D;
+}
+
+.kakao:active {
+  background: #F5DC00;
+}
+
+.instaNote {
+  background: var(--surface);
+  border: 1.5px solid var(--line);
+  border-radius: var(--radius-md);
+  padding: 14px 18px;
+}
+
+.instaNote p {
+  font-size: 13px;
+  color: var(--subtext);
+  line-height: 1.7;
+  text-align: center;
+  letter-spacing: -0.2px;
+}
+
+.resetBtn {
+  align-self: center;
+  color: var(--subtext);
+  font-size: 14px;
+}
